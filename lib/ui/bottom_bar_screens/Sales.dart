@@ -5,18 +5,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:yahia_new_task/shared/app_colors.dart';
 
 
- class SearchBottomBarScreen extends StatefulWidget {
-  bool isFirstTime;
+ class Sales extends StatefulWidget {
 
-  SearchBottomBarScreen(this.isFirstTime);
+
+  Sales();
 
   @override
-  _SearchBottomBarScreenState createState() => _SearchBottomBarScreenState();
+  _SalesState createState() => _SalesState();
 }
 
-class _SearchBottomBarScreenState extends State<SearchBottomBarScreen>
+class _SalesState extends State<Sales>
     with TickerProviderStateMixin {
   @override
   void initState() {
@@ -26,7 +27,7 @@ class _SearchBottomBarScreenState extends State<SearchBottomBarScreen>
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: Text("welcome 6",style: TextStyle(fontSize: 14,color: Colors.greenAccent),),),
+      body: Center(child: Text("Sales ",style: TextStyle(fontSize: 22,color: AppColors.selectedTab),),),
     ) ;
   }
 }

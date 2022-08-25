@@ -12,21 +12,14 @@ class HomeNavController extends GetxController with GetTickerProviderStateMixin 
     tabIndex = index;
     update();
   }
-
-  bool showChat=true;
-  bool showWallet=true;
-
   var pageController = PageController().obs;
-  var animateController;
-   RxList stories =  [].obs;
-   late TabController tabController;
+  late TabController tabController;
+
   @override
   void onInit() async{
-
     // TODO: implement onInit
-
     super.onInit();
-    animateController = AnimationController(vsync: this).obs;
+    changeTabIndex(0);
     tabController = TabController(length: 3, vsync: this);
 
   }
