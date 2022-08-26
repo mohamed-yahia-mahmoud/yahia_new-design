@@ -7,7 +7,7 @@ import 'package:yahia_new_task/ui/bottom_bar_screens/Sales.dart';
 import 'package:yahia_new_task/ui/bottom_bar_screens/Wallet.dart';
 import 'package:yahia_new_task/ui/home_page/widgets/customTab.dart';
 import '../../../shared/app_colors.dart';
-import '../../bottom_bar_screens/HomeScreen.dart';
+import '../../bottom_bar_screens/homeScreen/view/HomeScreen.dart';
 import '../controller/home_navigation_controller.dart';
 //=========================================================================================
 
@@ -51,19 +51,15 @@ class Home extends StatelessWidget {
 
                   tabs:   [
 
+                    CustomTab('house.png', controller.tabIndex==0?AppColors.selectedTab:AppColors.unseletabColor, 'الرئيسية'),
 
+                    CustomTab('wallet2.png', controller.tabIndex==1?AppColors.selectedTab:AppColors.unseletabColor, 'المحفظة'),
 
+                    CustomTab('sales.png', controller.tabIndex==2?AppColors.selectedTab:AppColors.unseletabColor, 'المبيعات'),
 
+                    CustomTab('cart-check.png', controller.tabIndex==3?AppColors.selectedTab:AppColors.unseletabColor, 'طلبات مسبقة'),
 
-                    CustomTab('house.png', controller.tabIndex==4?AppColors.selectedTab:AppColors.unseletabColor, 'الرئيسية'),
-
-                    CustomTab('wallet2.png', controller.tabIndex==3?AppColors.selectedTab:AppColors.unseletabColor, 'المحفظة'),
-
-                    CustomTab('selling.png', controller.tabIndex==2?AppColors.selectedTab:AppColors.unseletabColor, 'المبيعات'),
-
-                    CustomTab('cart-check.png', controller.tabIndex==1?AppColors.selectedTab:AppColors.unseletabColor, 'طلبات مسبقة'),
-
-                    CustomTab('three-dots.png', controller.tabIndex==0?AppColors.selectedTab:AppColors.unseletabColor, 'المزيد'),
+                    CustomTab('three-dots.png', controller.tabIndex==4?AppColors.selectedTab:AppColors.unseletabColor, 'المزيد'),
 
 
                   ]),
