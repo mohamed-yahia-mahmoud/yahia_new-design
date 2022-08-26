@@ -1,51 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:yahia_new_task/shared/app_colors.dart';
 
 class BasketItem extends StatelessWidget{
-  final String? text;
-  final int? selectedPage;
-  final int? pageNum;
+  final int? numOfItem;
   final VoidCallback? onPressed;
-  final double? myWidth;
-  final double? myHeight;
-  final double? myFontSize;
   final String? img;
-  final double? myImgWidth;
-  final double? myImgHeight;
-  BorderRadius? myBorderRadius;
-  BasketItem({Key? key, this.text,this.selectedPage,this.pageNum,this.onPressed,this.myWidth,this.myHeight,this.myFontSize,this.img,
-    this.myImgWidth,this.myImgHeight,this.myBorderRadius}) : super(key: key);
+  BasketItem({Key? key, this.numOfItem,this.onPressed, this.img,}) : super(key: key);
   @override
   Widget build(BuildContext context){
     return GestureDetector(
       onTap: onPressed,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-            height: myHeight ,
-            width: myWidth ,
-            decoration: BoxDecoration(
-              color: selectedPage==pageNum?AppColors.selectedTab:Colors.white,
-              borderRadius: myBorderRadius?? BorderRadius.circular(10.0,),
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+                height: 62.h ,
+                width: 62.w ,
+                decoration: BoxDecoration(
+                  color:  Colors.white,
+                  borderRadius:  BorderRadius.circular(10.0,),
+                  border: Border.all(color: AppColors.borderColor,width: 1)
+                ),
+                child: Image.asset('assets/images/$img.png',width: 50.w,height: 33.h,),
             ),
-            child: img==null?Center(
-              child: Text(text??"TapButton",style: myFontSize==null? TextStyle(color: selectedPage==pageNum?Colors.white:AppColors.selectedTab,fontSize: 15,fontFamily: 'SST Arabic')
-                  :TextStyle(color: selectedPage==pageNum?Colors.white:AppColors.selectedTab,fontSize: myFontSize ,fontFamily: 'SST Arabic'),
+          ),
+
+
+          Positioned(left: 19.w,top: 0,
+            child: Container(
+              width: 23.w,
+              height: 23.h,
+              decoration: const BoxDecoration(
+                  color: AppColors.endColor,
+                  shape: BoxShape.circle
               ),
-            ):
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-             Padding(
-               padding: const EdgeInsets.only(left:4.0),
-               child: Text(text??"TapButton",style: myFontSize==null? TextStyle(color: selectedPage==pageNum?Colors.white:AppColors.selectedTab,fontSize: 15,fontFamily: 'SST Arabic')
-                  :TextStyle(color: selectedPage==pageNum?Colors.white:AppColors.selectedTab,fontSize: myFontSize,fontFamily: 'SST Arabic'),
-            ),
-             ),
-            Image.asset('assets/images/$img',width: myImgWidth,height: myImgHeight,),
-          ],
-        )
-        ),
+              child:   Center(child: Text('$numOfItem',style: TextStyle(color: Colors.white,fontSize: 13,fontFamily: 'SST Arabic'),),),
+            ),),
+
+          Positioned(left: 0,top: -0,
+            child: Container(
+              width: 23.w,
+              height: 23.h,
+              decoration: const BoxDecoration(
+                  color: AppColors.binBgrColor,
+                  shape: BoxShape.circle
+              ),
+              child: Center(child: Image.asset('assets/icons/bin.png',width: 8.82.w,height: 12.26.h,)),
+            ),),
+
+        ],
       ),
     );
   }

@@ -19,6 +19,11 @@ class AppColors {
   static const Color phoneNumColor = Color(0xFFAEECE7);
   static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color buyButtonColor = Color(0xFF208178);
+  static const Color binBgrColor = Color(0xFFFF7777);
+  static const Color borderColor = Color(0xFFE9EBEF);
+  static const Color searchColor = Color(0xFFA2A2A2);
+
+
 
 
 

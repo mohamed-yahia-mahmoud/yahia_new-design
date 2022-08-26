@@ -11,6 +11,8 @@ import '../../../../network/models/ProductModel.dart';
 class HomeScreenController extends GetxController with GetTickerProviderStateMixin {
 
   int? selectedPage;
+
+  var visibleBasket=false.obs;
   var pageController = PageController().obs;
 
   List<ProductModel> items=
