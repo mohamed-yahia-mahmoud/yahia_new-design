@@ -22,7 +22,6 @@ class Home extends StatelessWidget {
 
     return WillPopScope(
       onWillPop: ()async{
-        print("WillPopScope Nav");
         return true;
       },
       child: GetBuilder<HomeNavController>(
