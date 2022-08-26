@@ -62,16 +62,13 @@ class CarDItem extends StatelessWidget {
 
           ///product img
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset('assets/images/$img',width: imgWidth,height: imgHeight,),
+            padding: const EdgeInsets.all(4.0),
+            child: Image.asset('assets/images/$img',width: imgWidth,height: imgHeight,scale: 3,),
           ),
 
 
-          Column(
-            children: [
-          ///product name
           Padding(
-            padding:   EdgeInsets.only(right: 14.0,top: 4,bottom: 4),
+            padding:  const EdgeInsets.only(right: 14.0,),
             child: Text( productName!,style: TextStyle(color: Colors.black,fontSize: 14,fontFamily: 'SST Arabic')),
           ),
 
@@ -92,7 +89,7 @@ class CarDItem extends StatelessWidget {
 
           /// add to cart & item price
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4.0,horizontal: 8),
+            padding: const EdgeInsets.only(bottom: 4.0,left: 8,right: 8),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -109,8 +106,6 @@ class CarDItem extends StatelessWidget {
                     child: Image.asset('assets/images/plus.png',width: 28,height: 28,)),
               ],
             ),
-          )
-            ],
           )
 
 

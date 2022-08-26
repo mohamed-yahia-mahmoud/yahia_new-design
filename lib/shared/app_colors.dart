@@ -16,6 +16,9 @@ class AppColors {
 
   static const Color kcalColor = Color(0xFFE8F8F7);
   static const Color kcaTextColor = Color(0xFF0FA59A);
+  static const Color phoneNumColor = Color(0xFFAEECE7);
+  static const Color whiteColor = Color(0xFFFFFFFF);
+  static const Color buyButtonColor = Color(0xFF208178);
 
 
 
