@@ -16,7 +16,7 @@ class BasketCard extends StatelessWidget {
       Obx(()=>  Visibility(
         visible: controller.visibleBasket.value,
         child: Container(
-          height: 200.h,
+          height: 209.h,
           decoration: const BoxDecoration(
               color: AppColors.endColor,
               borderRadius: BorderRadius.only(topRight: Radius.circular(20),topLeft: Radius.circular(20))
@@ -36,7 +36,7 @@ class BasketCard extends StatelessWidget {
                     },
                     child: Padding(
                       padding:   EdgeInsets.only(top:9.0.w,left: 8.h),
-                      child: Image.asset('assets/icons/x-circle.png',width: 25.h,height: 25.h,),
+                      child: Image.asset('assets/icons/x-circle.png',width: 20.h,height: 20.h,),
                     ),
                   ),
 
@@ -74,7 +74,7 @@ class BasketCard extends StatelessWidget {
                             ),
                             /// kid name
                             const  Padding(
-                              padding:  EdgeInsets.all(4.0),
+                              padding:  EdgeInsets.only(top:4.0,bottom: 4,right: 4),
                               child:   Text('محمد بن عبد الله الفلاج',style: TextStyle(color: AppColors.whiteColor,fontSize: 15,fontFamily: 'SST Arabic',fontWeight: FontWeight.w400),),
                             ),
 
@@ -83,7 +83,7 @@ class BasketCard extends StatelessWidget {
                               children: [
                                 /// daily deposit
                                 Padding(
-                                  padding: const EdgeInsets.only(right:12.0),
+                                  padding: const EdgeInsets.only(right:2.0),
                                   child: RichText(
                                     text: const TextSpan(
                                         style:     TextStyle(color: Colors.white,fontSize: 14,fontFamily: 'SST Arabic'),
