@@ -15,6 +15,8 @@ class HomeScreenController extends GetxController with GetTickerProviderStateMix
   var visibleBasket=false.obs;
   var pageController = PageController().obs;
 
+
+
   List<ProductModel> items=
   [    ProductModel(kcalNum: 200,img: 'jucie.png',imgHeight: 106.h,imgWidth: 47.w,productName: 'عصير تفاح 250مل',price: 14,numOfProductInStore: 44),
     ProductModel(kcalNum: 200,img: 'lays.png',imgHeight: 106.h,imgWidth: 79.w,productName: 'ليز',price: 26,numOfProductInStore: 13),
