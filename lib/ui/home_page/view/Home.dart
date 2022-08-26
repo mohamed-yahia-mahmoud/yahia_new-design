@@ -65,6 +65,7 @@ class Home extends StatelessWidget {
             body: SafeArea(
               top: false,
               child: TabBarView(
+                  physics: NeverScrollableScrollPhysics(),
                   children: [
 
                     HomeScreen(),
